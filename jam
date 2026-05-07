@@ -1,0 +1,9 @@
+def my_fuction():
+    a=5
+    b=6
+    c=6
+
+    return 0
+
+ my_fuction()
+
