@@ -31,3 +31,9 @@ Step 3: git push
 What it does: It sends your labeled box to the GitHub servers.
 
 Analogy: Handing the box to the delivery truck to take it to the warehouse (GitHub).
+ 
+git remote add origin git@github.com:shubham321-cyber/nayi-repo-ka-naam.git: to connect ssh 
+
+
+
+
