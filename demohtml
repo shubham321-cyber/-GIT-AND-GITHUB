@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Cloud & DevOps Services 🚀</title>
+    <style>
+        /* Pro Styling - Pure & Professional */
+        :root {
+            --primary-color: #0d47a1; /* Professional Blue */
+            --secondary-color: #2196f3;
+            --accent-color: #ff9800; /* Orange Accent */
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Header Section --- */
+        header {
+            background-color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* --- Hero Section with Animation --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #0d47a1, #1e88e5, #ffffff);
+            background-size: 300% 300%;
+            animation: gradientShift 15s ease infinite; /* Background Animation */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 0;
+            color: white;
+        }
+
+        .hero-content {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease forwards; /* Entry Animation */
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 152, 0, 0.5);
+        }
+
+        /* --- Services Section --- */
+        .services {
+            padding: 100px 50px;
+            background-color: white;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .services-header h2 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        /* Colorful Service Cards with Hover Effect */
+        .service-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s, border-top 0.3s;
+            text-align: left;
+            border-top: 5px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Dynamic Border Colors on Hover */
+        .service-card:nth-child(1):hover { border-top: 5px solid #2196f3; }
+        .service-card:nth-child(2):hover { border-top: 5px solid #e91e63; }
+        .service-card:nth-child(3):hover { border-top: 5px solid #ff9800; }
+        .service-card:nth-child(4):hover { border-top: 5px solid #4caf50; }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        /* --- Footer Section --- */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        footer p { margin-bottom: 10px; }
+
+        /* --- Animations & Keyframes --- */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Shubham</div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Singapore</a></li>
+                <li><a href="#">Dubai</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span style="background: rgba(255, 152, 0, 0.2); padding: 5px 10px; border-radius: 20px; color: var(--accent-color); font-weight: bold; margin-bottom: 20px; display: inline-block;">Authorized Cloud Specialists</span>
+            <h1>Cloud & DevOps Services</h1>
+            <p>Accelerate your business with customized, highly scalable, and secure cloud infrastructure designed by <strong>Shubham</strong>, the DevOps expert for international markets.</p>
+            <button class="btn">Explore Our Solutions <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="services-header">
+            <h2>Our Specialized Expertise</h2>
+            <p>We provide end-to-end solutions to modernize your tech stack.</p>
+        </div>
+        
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-cloud service-icon" style="color:#2196f3;"></i>
+                <h3>Cloud Migration</h3>
+                <p>Seamlessly transition your legacy applications to AWS, Azure, or GCP with zero downtime and optimized costs.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-infinity service-icon" style="color:#e91e63;"></i>
+                <h3>CI/CD Pipelines</h3>
+                <p>Automate your software delivery lifecycle with robust Jenkins, GitLab, or GitHub Actions integration.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-container-storage service-icon" style="color:#ff9800;"></i>
+                <h3>Infrastructure as Code</h3>
+                <p>Manage and provision your infrastructure using Terraform and Ansible for consistent and error-free environments.</p>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-shield-alt service-icon" style="color:#4caf50;"></i>
+                <h3>Kubernetes & Docker</h3>
+                <p>Containerize your applications and orchestrate them for unmatched scalability and reliability in production.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Shubham Cloud & DevOps Services | Global Enterprise Partner</p>
+        <p>Server Status: <span style="color: #4caf50;">LIVE</span> | IP: 52.66.201.226</p>
+    }
+    </footer>
+
+</body>
+</html>
+sudo apt update
+sudo apt install apache2 -y
+sudo rm /var/www/html/index.html
+sudo nano /var/www/html/index.html
