@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Aapka Web Server
+  shubham-web:
+    build: .
+    ports:
+      - "8080:80"
+    networks:
+      - cloud-network
+
+  # Aapka MySQL Database
+  shubham-db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: shubham_db
+    networks:
+      - cloud-network
+
+networks:
+  cloud-network:
+    driver: bridge
