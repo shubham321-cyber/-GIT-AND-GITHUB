@@ -1,23 +1,27 @@
 version: '3.8'
 
 services:
-  # Aapka Web Server
   shubham-web:
     build: .
     ports:
-      - "8080:80"
+      - "9000:80"  # Ab aap localhost:9000 par web page dekhoge
     networks:
       - cloud-network
 
-  # Aapka MySQL Database
   shubham-db:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: shubham_db
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - cloud-network
 
 networks:
   cloud-network:
     driver: bridge
+
+volumes:
+  db_data:
