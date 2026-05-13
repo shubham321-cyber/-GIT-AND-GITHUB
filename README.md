@@ -48,13 +48,4 @@ Port Mapping: The container runs internally on Port 80, mapped to Port 9000 for 
 Quick Start & Execution
 To deploy the entire stack on any Linux-based environment (Local WSL2 or AWS EC2), execute:
 
-Bash
-# Clone the repository
-git clone https://github.com/your-username/Docker--projects.git
 
-# Navigate and deploy
-cd Docker--projects
-docker compose up -d --build
-Local Access: http://localhost:9000
-
-Cloud Access: http://<YOUR-EC2-PUBLIC-IP>:9000
