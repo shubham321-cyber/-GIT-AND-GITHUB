@@ -27,6 +27,8 @@ Bash
 docker compose up -d --build
 Once the orchestration is complete, the portal is accessible at:
 http://localhost:9000
+<img width="1891" height="901" alt="image" src="https://github.com/user-attachments/assets/1916c766-f824-4afb-a625-c3bb1646a013" />
+
 
 📂 Project Structure
 Plaintext
