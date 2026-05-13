@@ -1,49 +1,60 @@
-Cloud-Native Service Orchestration Portal
-A sophisticated 3-Tier Architecture demonstration, showcasing the seamless integration of a containerized frontend, a Python-based backend API, and a persistent MySQL database. This project serves as a practical implementation of modern DevOps workflows and Infrastructure as Code (IaC) principles.
+🚀 Cloud Service Intake Portal: Multi-Cloud Deployment
+A 3-Tier Architecture demonstration of Cloud-Native Service Orchestration.
+
+This project is a sophisticated demonstration of a 3-Tier Architecture, successfully deployed both locally and on a live AWS EC2 instance. It serves as a practical implementation of modern DevOps workflows, focusing on containerization, infrastructure portability, and data persistence.
+<img width="1905" height="852" alt="image" src="https://github.com/user-attachments/assets/d1bd3db0-48c2-4383-af07-1c11a16423fc" />
+database: <img width="923" height="306" alt="image" src="https://github.com/user-attachments/assets/a1ce2af9-cab5-4691-862f-8b51e901202a" />
+
+
+🌐 The Project Concept
+This portal acts as a simplified Cloud Service Marketplace. Users can select their preferred cloud provider (AWS, Azure, or Google Cloud), specify their requirements and budget, and the system securely stores this data in a managed MySQL database.
 
 🏗️ System Architecture
-The application is architected to ensure complete environment isolation and data integrity:
+The application is architected to ensure complete environment isolation and 100% reproducibility across local and cloud environments:
 
-Frontend Layer: A responsive web interface for capturing client service requirements.
+Frontend Layer: A responsive web interface built with HTML/Inter UI for capturing client infrastructure needs.
 
-Application Layer: A Python Flask backend that handles business logic and secure database transactions.
+Application Layer: A Python Flask backend API that manages business logic and handles secure database transactions.
 
-Data Layer: A MySQL 8.0 instance managed with Docker Volumes to ensure data persistence across container lifecycles.
+Data Layer: A MySQL 8.0 instance optimized with Docker Volumes to ensure data remains persistent even if containers are destroyed.
 
 🛠️ Technology Stack
 Programming: Python 3.9
 
-Framework: Flask
+Web Framework: Flask
 
 Database: MySQL 8.0
 
-Infrastructure: Docker & Docker Compose
+Containerization: Docker & Docker Compose
 
-Environment: Linux (Ubuntu/WSL2)
-Deployment & Execution
-To deploy the entire stack, execute the following command from the project root:
+Cloud Infrastructure: AWS EC2 (Ubuntu 24.04 LTS)
+
+☁️ Cloud Deployment (AWS EC2)
+Unlike a standard local project, this application is fully operational in a live cloud environment.
+
+Public Access: Hosted on an AWS EC2 instance with a public-facing IP.
+
+Networking: Configured AWS Security Groups to allow inbound traffic on Port 9000 (Web) and Port 22 (SSH).
+
+Port Mapping: The container runs internally on Port 80, mapped to Port 9000 for secure external access.
+.
+├── app.py              # Backend logic & MySQL connectivity
+├── Dockerfile          # Environment & dependency specifications
+├── docker-compose.yml  # Multi-container orchestration (Web + DB)
+├── init.sql            # Automated Database schema initialization
+├── templates/          # UI Components
+│   └── index.html      # Responsive Frontend
+└── README.md           # Professional Documentation
+Quick Start & Execution
+To deploy the entire stack on any Linux-based environment (Local WSL2 or AWS EC2), execute:
 
 Bash
+# Clone the repository
+git clone https://github.com/your-username/Docker--projects.git
+
+# Navigate and deploy
+cd Docker--projects
 docker compose up -d --build
-Once the orchestration is complete, the portal is accessible at:
-http://localhost:9000
-<img width="1891" height="901" alt="image" src="https://github.com/user-attachments/assets/1916c766-f824-4afb-a625-c3bb1646a013" />
+Local Access: http://localhost:9000
 
-
-📂 Project Structure
-Plaintext
-.
-├── app.py              # Application logic and DB connectivity
-├── Dockerfile          # Container environment specification
-├── docker-compose.yml  # Multi-service orchestration & networking
-├── templates/          # UI components
-│   └── index.html      # Service portal frontend
-└── README.md           # Professional documentation
-💡 Key DevOps Competencies Demonstrated
-Container Inter-connectivity: Established a secure bridge network for isolated communication between the application and database.
-
-Persistent Storage Management: Configured Docker Volumes to prevent data loss during container restarts or updates.
-
-Service Dependency Handling: Implemented logic to ensure the application layer gracefully handles database initialization delays.
-
-Infrastructure as Code: Fully defined the service environment in a single YAML configuration for 100% reproducibility.
+Cloud Access: http://<YOUR-EC2-PUBLIC-IP>:9000
